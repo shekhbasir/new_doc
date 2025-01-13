@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheikh Basir</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #main {
+            background-color: black;
+            color: white;
+        }
+        .ham{
+            color: blue;
+            font-family: 'Roboto', sans-serif;
+        }
+        .container {
+            display: flex;
+            align-items: center; 
+            justify-content: space-between; 
+            height: 100vh;
+            padding: 0 20px;
+        }
+
+        .text-content {
+            max-width: 50%; 
+        }
+
+        .photo {
+            width: 40%;
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+        }
+
+        .photo img {
+            width: 80%; 
+            height: auto;
+            border-radius: 50%;
+            border: 3px solid #fff;
+            padding: 10px;
+            object-fit: cover;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background: linear-gradient(45deg, #ff7e5f, #feb47b);
+            }
+            50% {
+                background: linear-gradient(45deg, #6a11cb, #2575fc);
+            }
+            100% {
+                background: linear-gradient(45deg, #ff7e5f, #feb47b);
+            }
+        }
+
+        .navbar {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .navbar a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            color: #f39c12;
+        }
+
+
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+#skills-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+}
+
+h2 {
+    font-size: 2em;
+    margin-bottom: 40px;
+}
+
+.skill-container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+}
+
+.skill {
+    margin-bottom: 20px;
+}
+
+.skill-name {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-bar span {
+    display: block;
+    height: 25px;
+    width: 0; /* Initially set to 0% */
+    background-color: #f39c12;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 25px;
+    color: white;
+    font-weight: bold;
+    transition: width 2s ease-in-out; /* Animation */
+}
+
+.progress-bar span p {
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#about {
+    padding: 50px;
+    display: none; /* Hide initially */
+}
+
+.about-text {
+    font-size: 1.5em;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    border-right: 3px solid #333;
+    animation: typing 4s steps(50) 1s forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+#about {
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    margin-top: 30px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.about-text {
+    white-space: pre-wrap; /* Ensure the text wraps properly */
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #1e90ff, #ff6347);
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .section {
+      text-align: center;
+      padding: 50px 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .section h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .project {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      width: 300px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+      animation: slideUp 1s ease-in-out;
+    }
+
+    .project:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    .project h2 {
+      font-size: 1.5em;
+      margin-bottom: 10px;
+    }
+
+    .project p {
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+
+    .project a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .cta {
+      margin-top: 30px;
+      font-size: 1.2em;
+      animation: fadeIn 3s ease-in-out;
+    }
+
+    .cta a {
+      color: #ffd700;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(50px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+
+
+
+
+    #certificate-section {
+        text-align: center;
+        margin: 40px 0;
+    }
+
+    #certificate-button {
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        font-size: 1.2rem;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    #certificate-button:hover {
+        background-color: #45a049;
+    }
+
+    /* Filter Buttons */
+    #filter-buttons {
+        margin: 20px 0;
+    }
+
+    #filter-buttons .filter {
+        padding: 8px 15px;
+        margin: 5px;
+        background-color: #5c6bc0;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    #filter-buttons .filter:hover {
+        background-color: #3e4d92;
+    }
+
+    #certificate-gallery {
+        display: none;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .certificate-item {
+        width: 300px;
+        margin: 10px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
+
+    .certificate-item:hover {
+        transform: scale(1.05);
+    }
+
+    .certificate-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    .certificate-item .certificate-title {
+        padding: 15px;
+        text-align: center;
+        font-size: 1.2rem;
+        background-color: #4CAF50;
+        color: white;
+        font-weight: bold;
+    }
+
+    .certificate-item .certificate-description {
+        padding: 10px;
+        font-size: 1rem;
+        text-align: center;
+        background-color: #f1f1f1;
+    }
+
+    /* Modal Styles */
+    #certificate-modal {
+        display: none;
+        position: fixed;
+        z-index: 999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        overflow: auto;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    #certificate-modal.show {
+        opacity: 1;
+    }
+
+    #modal-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 80%;
+        max-height: 80%;
+        overflow: hidden;
+    }
+
+    #modal-content img {
+        width: 100%;
+        height: auto;
+    }
+
+    #close-btn {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        color: #aaa;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+
+
+
+    body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  background-color: #333;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar li {
+  display: inline;
+  margin-right: 20px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+  border-radius: 5px;
+}
+
+.education-section {
+  padding: 100px 20px 20px;
+  background-color: #f4f4f4;
+  transition: transform 0.3s ease-in-out;
+}
+
+.details {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  background-color: #e2e2e2;
+  border-radius: 5px;
+  opacity: 0;
+  transform: scale(0.8);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.details.show {
+  display: block;
+  opacity: 1;
+  transform: scale(1);
+}
+
+    </style>
+</head>
+<body id="main" >
+    <div style="background:  linear-gradient(to right, #b69891, #f0ab76);">
+
+    <div class="navbar">
+        <nav>
+            <a href=""><button>🏠︎ HOME</button></a>
+                    <a href="#basi"><button>🙋‍♂️ ABOUT ME</button></a>
+                    <a href=""><button>EDUCATION</button></a>
+            <a href="#skills-section"><button>🧠 SKILL</button></a>
+            <a href="#certificate-section"><button>📊 CERTIFICATES</button></a>
+            <a href="#contact"><button>☎️ CONTACT</button></a>      
+          </nav>
+    </div>
+
+    <div class="container">
+        <div class="text-content">
+            <h3 >HI, My Self</h3><br>
+            <h1>Sheikh Basir</h1>
+            <h2>and I am <h2 style="color: red;">FrontEnd Web Developer</h2></h2><br>
+            <h4 style="color: #333; text-align: center; font-size: 1.2rem; max-width: 800px; margin: 20px auto;">"🗣️ Front-End Developer skilled in HTML, CSS, JavaScript, Java, C, SQL, and Python, specializing in dynamic, responsive web applications. Proficient in algorithms, data structures (ADS), and optimizing web performance for seamless user experiences."</h4>
+        </div>
+
+        <div class="photo">
+            <img src="basir.jpg" alt="Sheikh Basir">
+        </div>
+    </div>
+    </div>
+
+    <section>
+        
+        <div id="skills-section">
+            <h1>Welcome In My skill I am Sheikh Basir...</h1>
+ 
+            <div class="container">
+                <h2>My Skills</h2>
+                
+                <div class="skill-container">
+                    <div class="skill">
+                        <div class="skill-name">HTML</div>
+                        <div class="progress-bar" id="html-bar">
+                            <span><p>90%</p></span> 
+                         </div>
+                    </div>
+    
+                    <div class="skill">
+                        <div class="skill-name">CSS</div>
+                        <div class="progress-bar" id="css-bar">
+                            <span><p>85%</p></span>
+                        </div>
+                    </div>
+    
+                     <div class="skill">
+                        <div class="skill-name">JavaScript</div>
+                        <div class="progress-bar" id="js-bar">
+                            <span><p>80%</p></span>
+                        </div>
+                    </div>
+    
+                    <div class="skill"> 
+                        <div class="skill-name">Java</div>
+                        <div class="progress-bar" id="java-bar">
+                            <span><p>90%</p></span>
+                        </div>
+                    </div>
+
+                    <div class="skill">
+                        <div class="skill-name">C</div>
+                        <div class="progress-bar" id="c-bar">
+                            <span><p>85%</p></span>
+                        </div>
+                    </div>
+     
+                     <div class="skill">
+                        <div class="skill-name">SQL</div>
+                        <div class="progress-bar" id="sql-bar">
+                            <span><p>80%</p></span>
+                        </div>
+                    </div>
+     
+                    
+                    <div class="skill">
+                        <div class="skill-name">Python</div>
+                        <div class="progress-bar" id="python-bar">
+                            <span><p>65%</p></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+
+    </section>
+ <section id="basi">
+    <div class="content">
+
+        <h1>About Me</h1>
+        <div >
+        <h2 style="color: #42e18f;">🙋🏻 Hello! I'm <span class="highlight">Sheikh Basir</span>, a passionate <span class="highlight">Front-End Web Developer</span>.</h2>
+        <p id="intro-text">
+            I specialize in building responsive, intuitive, and visually appealing websites using technologies like <span class="highlight">HTML</span>, <span class="highlight">CSS</span>, <span class="highlight">JavaScript</span>, and <span class="highlight">Java</span>. My focus is on delivering seamless digital experiences that engage users and meet business goals.
+        </p>
+        <p id="skills-text">
+            My journey as a developer is shaped by a love for problem-solving and continuous learning. I am proficient in <span class="highlight">algorithms, data structures</span>, and <span class="highlight">SQL</span>, which helps me optimize performance and scalability.
+        </p>
+        <p id="future-text">
+            I believe in staying up to date with the latest web technologies to create modern, high-performance websites. With every project, I aim to combine creativity with technical expertise, ensuring the best possible experience for users.
+        </p>
+        <p><b>Thank you, Adityans faculty!</b></p>
+    </div>
+</section><br> <hr color="black">
+</div>
+
+<section id="certificate-section">
+        <h1>My Certificates</h1>
+        <button id="certificate-button">View My Certificates</button>
+        
+        <!-- Filter Options -->
+        <div id="filter-buttons">
+            <button class="filter" data-category="java">Java Certificate</button>
+            <button class="filter" data-category="htmlcss">HTML & CSS Certificate</button>
+            <button class="filter" data-category="internship">Internship Offer Letter</button>
+            <button class="filter" data-category="all">Show All</button>
+        </div>
+    
+        <!-- Certificate Gallery -->
+        <div id="certificate-gallery">
+            <div class="certificate-item java">
+                <img src="javacer.jpg" alt="Java Certificate">
+                <div class="certificate-title">Java Programming Certificate</div>
+                <p class="certificate-description" style="color: black;">Issued by [Complete Coding Channel online] on [[10, 2024].</p>
+            </div>
+            <div class="certificate-item htmlcss">
+                <img src="htmlcer.jpg" alt="HTML & CSS Certificate">
+                <div class="certificate-title">HTML & CSS Certificate</div>
+                <p class="certificate-description" style="color: black;">Issued by [Complete Coding Channel online ] on [1, 2025].</p>
+            </div>
+            <div class="certificate-item internship">
+                <img src="intern.jpg" alt="Internship Offer Letter">
+                <div class="certificate-title">Internship Offer Letter</div>
+                <p class="certificate-description" style="color: 
+                black;">Issued by [Cdesoft organization]] on [8,2025].</p>
+            </div>
+            <div class="javascript">
+                <img src="javascrip.jpg" alt="javascript certificate">
+                <div class="certificate-title">java script certificate</div>
+                <p class="certificate-description">Issued by[[Knowledge Gate Coding] on [11,2024]</p>
+            </div>
+        </div>
+    </section>
+
+
+     <br> <hr style="color: #f39c12;">
+
+     <section id="contact" style="display: flex; justify-content: space-between; padding: 50px; background: linear-gradient(45deg, #ff7e5f, #feb47b); animation: gradientAnimation 6s ease infinite;">
+    
+        <div style="flex: 1; padding-right: 20px;">
+            <h2 style="color: white;">Contact Information</h2>
+            <p style="color: white;">You can reach me at the following:</p>
+        
+            <h2>Email Address: 📧:</h2>
+
+            <a href="mailto:sheikhbasir147@gmail.com" style="text-decoration: none;">
+                <button style="padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #007BFF; color: white; border: none; border-radius: 5px;">
+                    <h2 style="margin: 0;">Email Address: 📧</h2>
+                </button>
+            </a>
+            
+    
+
+            <h2>Phone Number :☏: </h2>
+        <a href="tel:+919032272475" style="text-decoration: none;">
+            <button style="padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #28a745; color: white; border: none; border-radius: 5px;">
+                <h2 style="margin: 0;">Phone Number: ☏</h2>
+            </button>
+        </a>
+        
+             <h2>GitHub:👾:</h2>
+            <a href="https://github.com/shekhbasir" target="_blank" style="text-decoration: none;">
+                <button style="padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #333; color: white; border: none; border-radius: 5px;">
+                    <h2 style="margin: 0; border-radius: 50px">GitHub: 👾</h2>
+                </button>
+            </a>
+
+            <h2>LinkedIn :Ⓜ️:</h2>
+        <a href="https://www.linkedin.com/in/basirshekh" target="_blank" style="text-decoration: none;">
+            <button style="padding: 10px 20px; font-size: 16px; cursor: pointer;">
+                <h2 style="margin: 0;">LinkedIn: 📧</h2>
+            </button>
+        </a>
+            
+        </div>
+    
+        <div style="flex: 1; padding-left: 20px;">
+            <h2 style="color: white;">Contact Me</h2>
+            <p style="color: white;">Fill out the form below to get in touch with me:</p>
+    
+            <form  action="https://formspree.io/f/xbllwjbv" method="post" style="background-color: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);">
+                <div style="margin-bottom: 20px;">
+                    <label for="name" style="display: block; font-size: 16px;">Your Name</label>
+                    <!-- <h3><b></b>:⋆｡˚꒰ঌ Nama ໒꒱˚｡⋆:</b></h3> -->
+                    <input type="text" id="name" name="name" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Enter your :⋆｡˚꒰ঌ Name ໒꒱˚｡⋆:">
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <label for="email" style="display: block; font-size: 16px;">
+                    <input type="email" id="email" name="email" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="  Enter Your Email Address:💌:">
+                </div>
+                <div style="margin-bottom: 20px;">
+
+                    <label for="message" style="display: block; font-size: 16px;">Your Message</label>
+                    <h3><b></b></h3>
+                    <textarea id="message" name="message" rows="5" style="width: 100%; padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 5px;" placeholder="Described to reach with Me Sheikh:💁:"></textarea>
+                </div>
+                <div style="text-align: center;">
+                    <button type="submit" style="padding: 10px 20px; font-size: 16px; background-color: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer;"placeholder ="Click This message goes to Sheikh Basir 👆🏻">Submit</button>
+                </div>
+            </form>
+        </div>
+    </section>
+    <section id="section">
+        <h1>My Projects</h1>
+        <div class="projects">
+          <div class="project">
+            <h2>Calculator</h2>
+            <p>A responsive web-based calculator built using HTML, CSS, and JavaScript.</p>
+            <a href="#">View Project</a>
+          </div>
+          <div class="project">
+            <h2>Quiz Game</h2>
+            <p>An interactive quiz game with multiple-choice questions and a scoring system.</p>
+            <a href="https://github.com/shekhbasir/quiz.html.git">View Project</a>
+          </div>
+          <div class="project">
+            <h2>Portfolio</h2>
+            <p>A personal portfolio website to showcase skills and achievements.</p>
+            <a href="#">View Project</a>
+          </div>
+        </div>
+        <p class="cta">I'm always eager to learn and collaborate on exciting projects. 
+            and i am welcoming to you intrested of my projects   <a href="#">Let's connect!</a></p>
+      </section> <br><hr>
+    <script>
+         // JavaScript to animate the progress bars
+    window.onload = function() {
+    document.getElementById("html-bar").children[0].style.width = "90%";
+    document.getElementById("css-bar").children[0].style.width = "85%";
+    document.getElementById("js-bar").children[0].style.width = "80%";
+    document.getElementById("java-bar").children[0].style.width = "90%";
+    document.getElementById("c-bar").children[0].style.width = "85%";
+    document.getElementById("sql-bar").children[0].style.width = "80%";
+    document.getElementById("python-bar").children[0].style.width = "65%";
+
+    }
+    document.getElementById('certificate-button').addEventListener('click', () => {
+        const gallery = document.getElementById('certificate-gallery');
+        gallery.style.display = gallery.style.display === 'flex' ? 'none' : 'flex';
+        gallery.classList.add('fade-in');
+    });
+
+    // Filter certificates
+    const filterButtons = document.querySelectorAll('.filter');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            const category = e.target.getAttribute('data-category');
+            const items = document.querySelectorAll('.certificate-item');
+            items.forEach(item => {
+                if (category === 'all' || item.classList.contains(category)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Open certificate in a modal with animation
+    const certificateItems = document.querySelectorAll('.certificate-item img');
+    certificateItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            const modal = document.getElementById('certificate-modal');
+            const modalImg = document.getElementById('modal-img');
+            modal.style.display = 'block';
+            modalImg.src = e.target.src;
+            modal.classList.add('fade-in');
+        });
+    });
+
+    // Close modal when clicking the close button
+    document.getElementById('close-btn').addEventListener('click', () => {
+        document.getElementById('certificate-modal').style.display = 'none';
+    });
+
+    // Close modal if clicked outside the modal content
+    window.addEventListener('click', (e) => {
+        if (e.target === document.getElementById('certificate-modal')) {
+            document.getElementById('certificate-modal').style.display = 'none';
+        }
+    });
+
+    // Animation for fade-in
+    document.styleSheets[0].insertRule(`
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+    `, 0);
+
+
+    
+
+
+   
+    </script>
+</body>
+</html> 
+
+
+
+
